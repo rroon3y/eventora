@@ -11,6 +11,17 @@
   z-index: 1000;
   width: 100%;
   box-sizing: border-box;
+  transform: translateY(-100%);
+  animation: slideInDown 0.6s ease-out forwards;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .navbar h1 {
@@ -38,11 +49,28 @@
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .navbar a:hover {
   color: #ff1493;
+  transform: translateY(-2px);
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(45deg, #ff1493, #ff69b4);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 /* Responsive Design */
