@@ -14,7 +14,7 @@ import "../styles/ValueCard.css";
 
 const Home = () => {
     return (
-        <div>
+        <div className="home">
             <Navbar />
 
             <section className="hero">
@@ -39,7 +39,6 @@ const Home = () => {
     ))}
   </div>
 </section>
-
 
 <section className="categories-section">
   <h2>Event Categories</h2>
