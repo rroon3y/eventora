@@ -2,22 +2,50 @@ const categories = [
   {
     id: 1,
     name: "Music",
-    icon: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop"
+    icon: "🎵",
+    count: "120+"
   },
   {
     id: 2,
     name: "Tech",
-    icon: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=100&h=100&fit=crop"
+    icon: "💻",
+    count: "85+"
   },
   {
     id: 3,
     name: "Comedy",
-    icon: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=100&h=100&fit=crop"
+    icon: "😂",
+    count: "45+"
   },
   {
     id: 4,
     name: "Sports",
-    icon: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=100&h=100&fit=crop"
+    icon: "⚽",
+    count: "60+"
+  },
+  {
+    id: 5,
+    name: "Arts",
+    icon: "🎨",
+    count: "35+"
+  },
+  {
+    id: 6,
+    name: "Food",
+    icon: "🍽️",
+    count: "40+"
+  },
+  {
+    id: 7,
+    name: "Business",
+    icon: "💼",
+    count: "55+"
+  },
+  {
+    id: 8,
+    name: "Fitness",
+    icon: "🏃",
+    count: "30+"
   }
 ];
 

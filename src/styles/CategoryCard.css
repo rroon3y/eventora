@@ -1,75 +1,105 @@
+/* ============================================================
+   Category Card — Glow Ring, Modern Design
+   ============================================================ */
+
 .category-card {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-  color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xl) var(--space-lg);
+  background: var(--gradient-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: var(--transition-bounce);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.category-card:nth-child(1) { animation-delay: 0.1s; }
-.category-card:nth-child(2) { animation-delay: 0.2s; }
-.category-card:nth-child(3) { animation-delay: 0.3s; }
-.category-card:nth-child(4) { animation-delay: 0.4s; }
-.category-card:nth-child(5) { animation-delay: 0.5s; }
-.category-card:nth-child(6) { animation-delay: 0.6s; }
-
 .category-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(255, 20, 147, 0.4), 0 0 20px rgba(255, 20, 147, 0.2);
+  border-color: rgba(255, 20, 147, 0.25);
+  box-shadow: 0 20px 50px rgba(255, 20, 147, 0.15), 0 0 30px rgba(255, 20, 147, 0.08);
 }
 
-.category-card img {
-  width: 60px;
-  height: 60px;
+/* Icon Wrapper with Glow Ring */
+.category-icon-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--gradient-glass);
+  border: 2px solid rgba(255, 20, 147, 0.2);
+  transition: var(--transition-base);
+}
+
+.category-card:hover .category-icon-wrapper {
+  border-color: rgba(255, 20, 147, 0.5);
+  box-shadow: 0 0 30px rgba(255, 20, 147, 0.3), inset 0 0 20px rgba(255, 20, 147, 0.1);
+}
+
+.category-icon {
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-  margin-bottom: 10px;
 }
 
-.category-card h3 {
+.category-emoji {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.category-name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
   margin: 0;
-  background: linear-gradient(45deg, #ff1493, #ff69b4);
+  background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 
-/* Responsive Design */
+.category-count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .category-card {
-    width: 140px;
-    padding: 1.2rem;
+    padding: var(--space-lg) var(--space-md);
+    min-width: 140px;
   }
-
-  .category-card img {
-    width: 50px;
-    height: 50px;
+  
+  .category-icon-wrapper {
+    width: 60px;
+    height: 60px;
   }
-
-  .category-card h3 {
-    font-size: 1rem;
+  
+  .category-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .category-emoji {
+    font-size: 28px;
   }
 }
 
 @media (max-width: 480px) {
   .category-card {
-    width: 120px;
-    padding: 1rem;
+    padding: var(--space-md);
+    min-width: 100px;
   }
-
-  .category-card img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .category-card h3 {
-    font-size: 0.9rem;
+  
+  .category-name {
+    font-size: var(--font-size-base);
   }
 }
